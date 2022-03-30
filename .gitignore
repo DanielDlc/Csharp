@@ -90,3 +90,7 @@ IDE/MonoDevelop/MonoDevelop.MonoGame/templates/Common/MonoGame.Framework.dll.con
 
 # docfx
 _*
+
+#Code
+launch.json
+tasks.json
