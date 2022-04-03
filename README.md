@@ -18,7 +18,7 @@ Todo projeto possui seu estilo de código, alguns com algumas práticas mais ava
 
 Bom
 
-``` C#
+```
 int idade;  // Correto iniciar com ZERO
 int idade = 38;  // Correto iniciar com 38
 var idade = 38;  // Correto iniciar com 38
