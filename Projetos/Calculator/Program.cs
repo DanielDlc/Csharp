@@ -16,6 +16,7 @@
             Console.WriteLine("2 - Subtração");
             Console.WriteLine("3 - Divisão");
             Console.WriteLine("4 - Multiplicação");
+            Console.WriteLine("0 - Sair");
 
             Console.WriteLine("-------------------");
             Console.WriteLine("Selecione uma opção:");
@@ -27,6 +28,7 @@
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
+                case 0: System.Environment.Exit(0); break;
                 default: Menu(); break;
 
             }   
