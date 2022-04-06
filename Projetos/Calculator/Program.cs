@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             //Soma();
-            Subtracao();
+            //Subtracao();
+            Divisao();
         }  
 
         static void Soma()
@@ -49,6 +50,23 @@
 
             Console.ReadKey();
         }
-   
+
+        static void Divisao()
+        {
+            Console.Clear();
+            
+            Console.WriteLine("Digite o primeiro valor: ");
+            float v1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo valor: ");
+            float v2 = float.Parse(Console.ReadLine());
+
+            float resultado = v1 / v2;
+
+            Console.WriteLine($"O resultado da divisão é: {resultado}");
+
+            Console.ReadKey();
+
+        }
     }  
 }
