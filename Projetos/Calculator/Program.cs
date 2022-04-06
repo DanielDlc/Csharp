@@ -19,12 +19,18 @@
 
             Console.WriteLine("-------------------");
             Console.WriteLine("Selecione uma opção:");
-            short resultado = short.Parse(Console.ReadLine());
+            short operador = short.Parse(Console.ReadLine());
+
+            switch (operador)
+            {
+                case 1: Soma(); break;
+                case 2: Subtracao(); break;
+                case 3: Divisao(); break;
+                case 4: Multiplicacao(); break;
+                default: Menu(); break;
+
+            }   
             
-
-
-
-
         }
 
         static void Soma()
@@ -50,6 +56,9 @@
 
             // não deixar o console sair da tela
             Console.ReadKey();
+
+            // chamar o menu novamente para não sair do menu("função dentro de função")
+            Menu();
         }
 
         static void Subtracao()
@@ -67,6 +76,7 @@
             Console.WriteLine($"O resultado da subtração é: {resultado}");
 
             Console.ReadKey();
+            Menu();
         }
 
         static void Divisao()
@@ -84,6 +94,7 @@
             Console.WriteLine($"O resultado da divisão é: {resultado}");
 
             Console.ReadKey();
+            Menu();
 
         }
     
@@ -102,6 +113,7 @@
             Console.WriteLine($"O resultado da multiplicação é: {resultado}");
 
             Console.ReadKey();
+            Menu();
         }
     }  
 }
