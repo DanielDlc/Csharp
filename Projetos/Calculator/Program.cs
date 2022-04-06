@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Soma();
+            //Soma();
+            Subtracao();
         }  
 
         static void Soma()
@@ -27,6 +28,27 @@
 
             // imprimir mostrando o resultado
             Console.WriteLine($"A soma do resultado é = {resultado}");
+
+            // não deixar o console sair da tela
+            Console.ReadKey();
         }
+
+        static void Subtracao()
+        {
+            Console.Clear();
+
+            Console.WriteLine("Digite o primeiro valor:");
+            float v1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo valor: ");
+            float v2 = float.Parse(Console.ReadLine());
+
+            float resultado = v1 - v2;
+
+            Console.WriteLine($"O resultado da subtração é: {resultado}");
+
+            Console.ReadKey();
+        }
+   
     }  
 }
