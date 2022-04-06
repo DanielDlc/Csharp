@@ -6,7 +6,9 @@
         {
             //Soma();
             //Subtracao();
-            Divisao();
+            //Divisao();
+            Multiplicacao();
+
         }  
 
         static void Soma()
@@ -67,6 +69,23 @@
 
             Console.ReadKey();
 
+        }
+    
+        static void Multiplicacao()
+        {
+            Console.Clear();
+
+            Console.WriteLine("Digite o primeiro valor: ");
+            float v1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo valor: ");
+            float v2 = float.Parse(Console.ReadLine());
+
+            float resultado = v1 * v2;
+
+            Console.WriteLine($"O resultado da multiplicação é: {resultado}");
+
+            Console.ReadKey();
         }
     }  
 }
