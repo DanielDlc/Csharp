@@ -7,7 +7,6 @@ namespace Stopwatch
     {
         static void Main(string[] args)
         {
-            //Start(10);
             Menu();
         }
 
@@ -20,7 +19,9 @@ namespace Stopwatch
             Console.WriteLine("Quanto tempo deseja contar?");
 
             string data = Console.ReadLine().ToLower();
+            char type = char.Parse(data.Substring(data.Length -1, 1));
             Console.WriteLine(data); 
+            Console.WriteLine(type); 
             
         }
   
