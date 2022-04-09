@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TextEditor
+﻿namespace TextEditor
 {
     class Program
     {
@@ -33,7 +31,20 @@ namespace TextEditor
 
             static void Editar()
             {
+                Console.Clear();
+                Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
+                Console.WriteLine("---------------------------------------");
+                string text = "";
 
+                do
+                {   
+                    text += Console.ReadLine();
+                    text += Environment.NewLine;
+                }
+
+                while(Console.ReadKey().Key != ConsoleKey.Escape);
+
+                Console.Write(text);
             }
 
         }
