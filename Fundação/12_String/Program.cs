@@ -5,11 +5,25 @@
         static void Main()
         {
             var texto = "Este texto é um teste";
-            Console.WriteLine(texto.ToLower());  // letras em minúscula
-            Console.WriteLine(texto.ToUpper());  // letras em maiúscula
-            Console.WriteLine(texto.Insert(11, "aqui "));  // inserir na posição 11 a palavra aqui
-            Console.WriteLine(texto.Remove(10, 11));  // remover os 11 caracteres após o 10°
-            Console.WriteLine(texto.Length);  // contar os caracteres
+            Console.WriteLine(texto.Replace("Este", "Isto"));  // trocar Este por Isto
+
+            Console.WriteLine("---------");
+
+            var divisao = texto.Split(" ");
+            Console.WriteLine(divisao[0]);
+            Console.WriteLine(divisao[1]);
+            Console.WriteLine(divisao[2]);
+            Console.WriteLine(divisao[3]);
+            Console.WriteLine(divisao[4]);
+
+            Console.WriteLine("---------");
+
+            var resultado = texto.Substring(13, 2);  // irá pegar o 13° índice e ira retornar 2 caracteres (um)
+            Console.WriteLine(resultado);
+
+            Console.WriteLine("---------");
+
+            Console.WriteLine(texto.Trim());  // limpa os espaços no início e no final
         }
     }
 }
