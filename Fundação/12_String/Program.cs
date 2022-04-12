@@ -1,14 +1,14 @@
 ﻿namespace String
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var price = 400.9;
-            //var texto = "o preço do produto é " + price + " apenas na promoção";
-            //var texto = string.Format(  "O preço do porduto é {0} apenas na promoção {1}", price, true);
-            var texto = $"O preço do produto é {price}";
-            Console.WriteLine(texto);
+            var texto = "Testando a palavra teste";
+            Console.WriteLine(texto.CompareTo("Testando a palavra teste"));  // retorna 0
+            Console.WriteLine(texto.CompareTo("testando a palavra teste"));  // retorna 1
+            Console.WriteLine(texto.Contains("teste"));  // verificar se existe essa palavra
+            Console.WriteLine(texto.Contains("Teste", StringComparison.OrdinalIgnoreCase));  // ignorar case senssitive
         }
     }
 }
