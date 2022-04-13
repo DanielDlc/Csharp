@@ -20,7 +20,6 @@ namespace EditorHtml
             Pipe();
             DrawScreen();
         }
-
         public static void DrawScreen() 
         {
             Console.Write("+");
