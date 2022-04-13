@@ -14,7 +14,6 @@ namespace EditorHtml
             var option = short.Parse(Console.ReadLine());
             HandleMenuOption(option);
         }
-
         public static void Lines()
         {
             DrawScreen();
@@ -71,7 +70,6 @@ namespace EditorHtml
             Console.Write("Opção: ");
         }
 
-    
         public static void HandleMenuOption(short option)
         {
             switch (option)
