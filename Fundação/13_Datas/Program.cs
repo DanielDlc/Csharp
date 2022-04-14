@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Datas
 {
@@ -7,13 +8,13 @@ namespace Datas
         static void Main (String[] args)
         {
             Console.Clear();
-            var data = DateTime.Now;
 
-            // comparar as datas
-            if (data.Date == DateTime.Now.Date);
-                Console.WriteLine(" é igual");
+            var pt = new CultureInfo("pt-PT");
+            var br = new CultureInfo("pt-BR");
+            var en = new CultureInfo("en-US");
+            var de = new CultureInfo("de-DE");
 
-            Console.WriteLine(data);
+            Console.WriteLine(DateTime.Now.ToString("D", en));
 
         }
     }
