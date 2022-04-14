@@ -8,16 +8,13 @@ namespace Datas
         {
             Console.Clear();
             var data = DateTime.Now;
+
+            // comparar as datas
+            if (data.Date == DateTime.Now.Date);
+                Console.WriteLine(" é igual");
+
             Console.WriteLine(data);
 
-            // verificar a data após 12 dias
-            Console.WriteLine(data.AddDays(-12));
-
-            // verificar a data após 1 mês
-            Console.WriteLine(data.AddMonths(1));           
-
-            // verificar a data após um ano
-            Console.WriteLine(data.AddYears(1));
         }
     }
 }
