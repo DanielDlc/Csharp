@@ -8,7 +8,9 @@ namespace Datas
         {
             Console.Clear();
             var data = DateTime.Now;
-            var formatada = String.Format("{0:dd,MM,yyyy hh:mm:ss}", data);
+            var formatada = String.Format("{0:r}", data);
+            // var formatada = String.Format("{0:s}", data);
+            // var formatada = String.Format("{0:u}", data);
             Console.WriteLine(formatada);
         }
     }
