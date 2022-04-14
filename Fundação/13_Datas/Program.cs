@@ -8,10 +8,16 @@ namespace Datas
         {
             Console.Clear();
             var data = DateTime.Now;
-            var formatada = String.Format("{0:r}", data);
-            // var formatada = String.Format("{0:s}", data);
-            // var formatada = String.Format("{0:u}", data);
-            Console.WriteLine(formatada);
+            Console.WriteLine(data);
+
+            // verificar a data após 12 dias
+            Console.WriteLine(data.AddDays(-12));
+
+            // verificar a data após 1 mês
+            Console.WriteLine(data.AddMonths(1));           
+
+            // verificar a data após um ano
+            Console.WriteLine(data.AddYears(1));
         }
     }
 }
