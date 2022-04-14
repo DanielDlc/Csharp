@@ -16,7 +16,6 @@ namespace Datas
             Console.WriteLine(data.Hour);
             Console.WriteLine(data.Minute);
             Console.WriteLine(data.Second);
-
             Console.WriteLine(data.DayOfYear);
         }
     }
