@@ -6,31 +6,16 @@
         {
             Console.Clear();
 
-            var timeSpan = new TimeSpan();
-            Console.WriteLine(timeSpan);
+            // saber quantos dias tem no mês
+            Console.WriteLine(DateTime.DaysInMonth(2022,4));
+            Console.WriteLine(IsWeekend(DateTime.Now.DayOfWeek));
+            Console.WriteLine(DateTime.Now.IsDaylightSavingTime());  // horário de verão
+        }
 
-            var timeSpanNanosegundos = new TimeSpan(1);
-            Console.WriteLine(timeSpanNanosegundos);
-
-            var timeSpanHoraMinutoSegundo = new TimeSpan(11, 37, 8);
-            Console.WriteLine(timeSpanHoraMinutoSegundo);
-
-            var timeSpanDiaHoraMinutoSegundo = new TimeSpan(3, 10, 50, 10);
-            Console.WriteLine(timeSpanDiaHoraMinutoSegundo);
-
-            Console.WriteLine("----------------------");
-
-            // subtrair horas, minutos e segundos por dia, hora, minutos e segundos.
-            var subtrair = (timeSpanHoraMinutoSegundo - timeSpanDiaHoraMinutoSegundo);
-            Console.WriteLine(subtrair);
-
-            // pegar os dias com .days
-            var dias = timeSpanDiaHoraMinutoSegundo.Days;
-            Console.WriteLine(dias);            
-            
-            // criando um novo TimeSpan
-            var novo = timeSpanDiaHoraMinutoSegundo.Add(new TimeSpan(12, 0, 0));
-            Console.WriteLine(novo);
+        // saber se é fim de semana ou não
+        static bool IsWeekend(DayOfWeek today)
+        {
+            return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
         }
     }
 }
