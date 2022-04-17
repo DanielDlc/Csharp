@@ -18,12 +18,21 @@ class Program
             Console.WriteLine(arr[index]);
             }
         }
-        catch (System.Exception)
-        {   
-            Console.WriteLine("Ops, algo deu errado!");
+
+        // tratar o erro específico 
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine(ex.InnerException);
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("Não encontrei o índice na lista");
         }
 
-    
-        
+        // tratar outros tipos de erros
+        catch (Exception ex)
+        {   
+            Console.WriteLine(ex.InnerException);
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("Ops, algo deu errado!");
+        }
     }
 }
