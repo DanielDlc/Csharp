@@ -35,7 +35,7 @@ class Program
             Console.WriteLine("Falha ao cadastrar o texto");
         }
 
-                // tratar null
+        // tratar null
         catch (MinhaException ex)
         {
             Console.WriteLine(ex.InnerException);
