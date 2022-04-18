@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exceptions;
+﻿namespace Exceptions;
 
 class Program
 {
@@ -37,6 +35,15 @@ class Program
             Console.WriteLine("Falha ao cadastrar o texto");
         }
 
+                // tratar null
+        catch (MinhaException ex)
+        {
+            Console.WriteLine(ex.InnerException);
+            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.QuandoAconteceu);
+            Console.WriteLine("Excecão customizada");
+        }
+
         // tratar outros tipos de erros
         catch (Exception ex)
         {   
@@ -50,7 +57,17 @@ class Program
     {
         if (string.IsNullOrEmpty(texto))
         {
-            throw new ArgumentNullException("O texto não pode ser nulo ou vazio");
+            throw new MinhaException(DateTime.Now);
         }
+    }
+
+    public class MinhaException : Exception
+    {
+        public MinhaException(DateTime date)
+        {
+            QuandoAconteceu = date;
+        }
+        public DateTime QuandoAconteceu { get; set; }
+
     }
 }
