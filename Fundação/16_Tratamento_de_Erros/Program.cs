@@ -51,6 +51,12 @@ class Program
             Console.WriteLine(ex.Message);
             Console.WriteLine("Ops, algo deu errado!");
         }
+
+        // verificar se um arquivo esta aberto.
+        finally
+        {
+            Console.WriteLine("Chegou ao fim!");
+        }
     }
 
     static void Cadastrar(string texto)
