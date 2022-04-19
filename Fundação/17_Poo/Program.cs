@@ -10,6 +10,8 @@
             pagamentoBoleto.Vencimento = DateTime.Now;
             pagamentoBoleto.NumeroBoleto = "123";
 
+            var pagamento = new Pagamento();
+            pagamento.ToString();
             // um objeto sempre é um tipo de referência
             // -> armazena apeas o endereço dos dados.
             Console.WriteLine("Classe de Pagamento");
@@ -23,18 +25,33 @@
         public DateTime Vencimento;
 
         // Métodos
-        public void Pagar() { }
+        public virtual void Pagar() { }
+
+        public override string ToString()
+        {
+            return Vencimento.ToString("yy");
+        }
     }
 
     // classe filho 1
     class PagamentoBoleto : Pagamento  // herança utilizando dois pontos ( pagamento boleto herdando de pagamento)
     {
         public string NumeroBoleto;
+
+        public override void Pagar()
+        {
+            // regra do boleto
+        }
     }
 
     // classe filho 2
     class PagamentoCartaoCredito : Pagamento
     {
         public string Numero;
+
+            public override void Pagar()
+        {
+            // regra do cartão de crédito
+        }
     }
 }
