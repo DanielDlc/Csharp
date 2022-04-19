@@ -1,14 +1,13 @@
-﻿using System;
-
-namespace Poo
+﻿namespace Poo
 {
     class Program
     {
         static void Main(String[] args)
         {
+            Console.Clear();
             // um objeto sempre é um tipo de referência
             // -> armazena apeas o endereço dos dados.
-            Console.WriteLine("Olá, Mundo de Poo!");
+            Console.WriteLine("Classe de Pagamento");
         }
     }
 
@@ -18,7 +17,17 @@ namespace Poo
         DateTime Vencimento;
 
         // Métodos
-        void Pagar(){}
+        void Pagar()
+        {
+            ConsultarSaldoDoCartao();
+
+        }
+
+        // Abstração: esconder detalhes do cartão 
+        private void ConsultarSaldoDoCartao()
+        {
+
+        }
 
     }
 }
