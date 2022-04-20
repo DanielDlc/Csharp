@@ -5,53 +5,19 @@
         static void Main(String[] args)
         {
             Console.Clear();
-            var pagamentoBoleto = new PagamentoBoleto();
-            pagamentoBoleto.Pagar();
-            pagamentoBoleto.Vencimento = DateTime.Now;
-            pagamentoBoleto.NumeroBoleto = "123";
-
-            var pagamento = new Pagamento();
-            pagamento.ToString();
-            // um objeto sempre é um tipo de referência
-            // -> armazena apeas o endereço dos dados.
             Console.WriteLine("Classe de Pagamento");
+            var pagamento = new Pagamento();
         }
     }
-
-    // classe pai
-    class Pagamento
+    // private, protected, internal e public
+    public class Pagamento
     {
         // Propriedades
-        public DateTime Vencimento;
-
-        // Métodos
-        public virtual void Pagar() { }
-
-        public override string ToString()
-        {
-            return Vencimento.ToString("yy");
-        }
+        protected DateTime Vencimento;
+        private void Pagar() { }
     }
-
-    // classe filho 1
-    class PagamentoBoleto : Pagamento  // herança utilizando dois pontos ( pagamento boleto herdando de pagamento)
+        public class PagamentoBoleto : Pagamento
     {
-        public string NumeroBoleto;
-
-        public override void Pagar()
-        {
-            // regra do boleto
-        }
-    }
-
-    // classe filho 2
-    class PagamentoCartaoCredito : Pagamento
-    {
-        public string Numero;
-
-            public override void Pagar()
-        {
-            // regra do cartão de crédito
-        }
+        void Test() { }
     }
 }
