@@ -5,19 +5,36 @@
         static void Main(String[] args)
         {
             Console.Clear();
-            Console.WriteLine("Classe de Pagamento");
+             
             var pagamento = new Pagamento();
+            pagamento.DataPagamento = DateTime.Now;
+
+            Console.WriteLine("Classe de Pagamento");
         }
     }
     // private, protected, internal e public
     public class Pagamento
     {
         // Propriedades
-        protected DateTime Vencimento;
-        private void Pagar() { }
-    }
-        public class PagamentoBoleto : Pagamento
-    {
-        void Test() { }
+        public DateTime Vencimento { get; set; }
+
+        private DateTime _dataPagamento;
+        public DateTime DataPagamento
+        {
+            get 
+            { 
+                Console.WriteLine("Lendo o valor"); 
+                return _dataPagamento; 
+            }
+            
+            set 
+            { 
+                Console.WriteLine("Atribuindo o valor");
+                _dataPagamento = value; 
+            }
+        }
+                
+         
+        void Pagar() { }
     }
 }
