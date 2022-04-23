@@ -5,36 +5,29 @@
         static void Main(String[] args)
         {
             Console.Clear();
-             
-            var pagamento = new Pagamento();
-            pagamento.DataPagamento = DateTime.Now;
-
             Console.WriteLine("Classe de Pagamento");
+            Console.WriteLine("-------------------");
+
+            using(var pagamento = new Pagamento())
+            {
+                Console.WriteLine("Processando o PAgamento");
+            }
         }
     }
     // private, protected, internal e public
-    public class Pagamento
-    {
-        // Propriedades
-        public DateTime Vencimento { get; set; }
-
-        private DateTime _dataPagamento;
-        public DateTime DataPagamento
+    public class Pagamento : IDisposable
+    {   
+        // Garbage
+        public Pagamento()
         {
-            get 
-            { 
-                Console.WriteLine("Lendo o valor"); 
-                return _dataPagamento; 
-            }
-            
-            set 
-            { 
-                Console.WriteLine("Atribuindo o valor");
-                _dataPagamento = value; 
-            }
+            Console.WriteLine("Iniciando o pagamento");
         }
-                
-         
-        void Pagar() { }
+
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
+            Console.WriteLine("Finalizando pagamento");
+        }
     }
+
 }
