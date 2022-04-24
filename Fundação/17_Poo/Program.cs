@@ -8,26 +8,34 @@
             Console.WriteLine("Classe de Pagamento");
             Console.WriteLine("-------------------");
 
-            using(var pagamento = new Pagamento())
-            {
-                Console.WriteLine("Processando o PAgamento");
-            }
+            
         }
     }
-    // private, protected, internal e public
-    public class Pagamento : IDisposable
-    {   
-        // Garbage
-        public Pagamento()
-        {
-            Console.WriteLine("Iniciando o pagamento");
-        }
+    public class PagamentoCartaoCredito : IPagamento
+    {
+        public DateTime Vencimento { get; set; }
 
-        public void Dispose()
+        public void Pagar(double valor)
         {
-            //throw new NotImplementedException();
-            Console.WriteLine("Finalizando pagamento");
+            throw new NotImplementedException();
         }
+    }
+
+    public class Pagamento : IPagamento
+    {
+        public DateTime Vencimento { get; set; }
+
+        public void Pagar(double valor)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    // interface é como um contrato
+    public interface IPagamento
+    {
+        DateTime Vencimento { get; set; }
+
+        void Pagar(double valor);
     }
 
 }
