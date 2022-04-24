@@ -2,40 +2,21 @@
 {
     class Program
     {
-        static void Main(String[] args)
+        static void RealizarPagamento(double valor)
         {
             Console.Clear();
-            Console.WriteLine("Classe de Pagamento");
-            Console.WriteLine("-------------------");
-
-            
+            Console.WriteLine($"Pago o valor de {valor}");
         }
-    }
-    public class PagamentoCartaoCredito : IPagamento
-    {
-        public DateTime Vencimento { get; set; }
-
-        public void Pagar(double valor)
+        static void Main(String[] args)
         {
-            throw new NotImplementedException();
-        }
+            var pagar = new Pagamento.Pagar(RealizarPagamento);
+            pagar(400);
+        }    
     }
 
-    public class Pagamento : IPagamento
+
+    public class Pagamento
     {
-        public DateTime Vencimento { get; set; }
-
-        public void Pagar(double valor)
-        {
-            throw new NotImplementedException();
-        }
+        public delegate void Pagar(double valor);
     }
-    // interface é como um contrato
-    public interface IPagamento
-    {
-        DateTime Vencimento { get; set; }
-
-        void Pagar(double valor);
-    }
-
 }
