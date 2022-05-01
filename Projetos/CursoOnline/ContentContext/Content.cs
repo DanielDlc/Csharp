@@ -1,3 +1,5 @@
+using System;
+
 namespace CursoOnline.ContentContext
 {
     public class Content
