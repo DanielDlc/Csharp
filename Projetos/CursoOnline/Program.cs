@@ -8,7 +8,7 @@ namespace CursoOnline
         {
             Console.WriteLine("Olá, Mundo Poo");
             var course = new Course();
-            course.Level = ContentContext.Enum.EContentLevel.Begin;
+            course.Level = ContentContext.Enums.EContentLevel.Beginner;
             foreach (var item in course.Modules)
             {
 
