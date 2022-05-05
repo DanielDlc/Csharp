@@ -1,6 +1,6 @@
 namespace CursoOnline.ContentContext.Enums
 {
-    public enum EcontentLevel
+    public enum EContentLevel
     {
         Beginner = 1,
         Fundamental = 2,
