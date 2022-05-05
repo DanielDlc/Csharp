@@ -1,13 +1,13 @@
-using System;
-
 namespace CursoOnline.ContentContext
 {
-    public class Content
+    public abstract class Content
     {
-        public Content()
+        public Content(string title, string url)
         {
             // criando Id no construtor da classe Pai. indicando um Spof
             Id = Guid.NewGuid();
+            Title = title;
+            Url = url;
         }
 
         public Guid Id { get; set; }
