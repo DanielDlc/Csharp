@@ -11,7 +11,7 @@ namespace CursoOnline
             articles.Add(new Article("Artigo sobre C#", "csharp"));
             articles.Add(new Article("Artigo sobre .NET", "dotnet"));
 
-            foreach ((var) article in articles)
+            foreach (var article in articles)
             {
                 Console.WriteLine(article.Id);
                 Console.WriteLine(article.Title);
@@ -31,6 +31,15 @@ namespace CursoOnline
             var carrerItem = new CareerItem(1,"Comece por aqui", "", null);
             careerDotnet.Items.Add(careerItem);
             careers.Add(careerDotnet);
+
+            foreach (var career in careers)
+            {
+                Console.WriteLine(career.Title);
+                foreach (var item in career.Items)
+                {
+                    Console.WriteLine($"{item.Order}-{item.Title}");
+                }
+            }
         }
 
     }
