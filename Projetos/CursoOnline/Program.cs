@@ -19,7 +19,7 @@ namespace CursoOnline
                 Console.WriteLine(article.Url);
             }
             */
-
+ 
             var courses = new List<Course>();
             var courseOOP = new Course("Fundamentos OOP", "fundamentos-oop");
             var courseCsharp = new Course("Fundamentos C#", "fundamentos-csharp");
@@ -50,6 +50,5 @@ namespace CursoOnline
                 }
             }
         }
-
     }
 }
