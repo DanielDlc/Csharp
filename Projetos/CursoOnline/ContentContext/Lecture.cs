@@ -2,7 +2,7 @@ using CursoOnline.ContentContext.Enums;
 
 namespace CursoOnline.ContentContext
 {
-    public class Lecture
+    public class Lecture : Base
     {
         public int Ordem { get; set; }
         public string? Title { get; set; }
