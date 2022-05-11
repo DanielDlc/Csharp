@@ -1,3 +1,5 @@
+using CursoOnline.SharedContext;
+
 namespace CursoOnline.ContentContext
 {
     public abstract class Content : Base
