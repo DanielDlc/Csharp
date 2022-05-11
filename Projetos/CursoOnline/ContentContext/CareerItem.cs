@@ -1,5 +1,5 @@
 using CursoOnline.NotificationContext;
-
+using CursoOnline.SharedContext;
 
 namespace CursoOnline.ContentContext
 {
