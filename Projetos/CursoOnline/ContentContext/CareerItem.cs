@@ -1,3 +1,6 @@
+using CursoOnline.NotificationContext;
+
+
 namespace CursoOnline.ContentContext
 {
     public class CareerItem : Base
@@ -9,7 +12,7 @@ namespace CursoOnline.ContentContext
             Course? course)
         {
             if(course == null)
-                throw new SystemException("O curso não pode ser nulo");
+                AddNotification(new Notification("Course", "Curso inválido"));
 
             Order = order;
             Title = title;
