@@ -1,4 +1,5 @@
 ﻿using CursoOnline.ContentContext;
+using CursoOnline.SubscriptionContext;
 
 namespace CursoOnline
 {
@@ -40,7 +41,7 @@ namespace CursoOnline
 
             foreach (var career in careers)
             {
-                //Console.Clear();  // removendo warning por enquanto.
+                Console.Clear();  // removendo warning por enquanto.
                 Console.WriteLine(career.Title);
                 foreach (var item in career.Items.OrderBy(x => x.Order))
                 {
@@ -53,6 +54,10 @@ namespace CursoOnline
                         Console.WriteLine($"{notification.Property} - {notification.Message}");
                     }
                 }
+                var payPalSubscription = new PayPalSubscription();
+                var student = new Student();  
+                student.Subscriptions.Add(payPalSubscription);
+
             }
         }
     }
