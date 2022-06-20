@@ -18,7 +18,7 @@
             Console.WriteLine("4 - Multiplicação");
             Console.WriteLine("0 - Sair");
 
-            Console.WriteLine("-------------------");
+            Console.WriteLine("--------------------");
             Console.WriteLine("Selecione uma opção:");
             short operador = short.Parse(Console.ReadLine());
 
